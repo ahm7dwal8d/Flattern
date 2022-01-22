@@ -119,7 +119,7 @@ html {
     }
     .topbar .container .contact .phone span {
         display: block;
-        font-size: 16px;
+        font-size: 14px;
     }
 }
 .topbar .container .icons i:hover {
@@ -805,6 +805,11 @@ html {
     line-height: 1.6;
     margin-left: 61px;
 }
+@media (max-width: 767px) {
+    .about .container .about-content .box .content {
+        width: 310px;
+    }
+}
 /* End About Content  */
 /* Start Team  */
 .team {
@@ -914,6 +919,10 @@ html {
     height: 100px;
     box-shadow: 2px 2px 15px #ddd;
     border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
 }
 
 @media (max-width: 991px) {
@@ -921,15 +930,22 @@ html {
         width: 602px;
     }
 }
+@media (max-width: 767px) {
+    .team .container .team-content .img .info {
+        text-align: center;
+    }
+}
 .team .container .team-content .img .info h2 {
     padding: 10px 0 0;
     margin-top: 0;
     color: #2b2320;
+    text-align: center;
 }
 .team .container .team-content .img .info span {
     color: #b4aca8;
     font-size: 16px;
     display: block;
+    text-align: center;
 }
 /* End Team  */
 /* End About Page  */
