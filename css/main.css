@@ -974,6 +974,11 @@ html {
     display: flex;
     justify-content: space-between;
 }
+@media (max-width: 1200px) {
+    .feature .container .feature-content {
+        flex-direction: column;
+    }
+}
 .feature .container .feature-content .boxs {
     flex-basis: 45%;
 }
@@ -994,8 +999,17 @@ html {
     padding: 15px;
 }
 .feature .container .feature-content .boxs .box p {
-    width: 400px;
     padding: 15px;
+}
+@media (max-width: 767px) {
+    .feature .container .feature-content p {
+        width: 270px;
+    }
+}
+@media (max-width: 1200px) {
+    .feature .container .feature-content img {
+        max-width: 100%;
+    }
 }
 .feature .container .feature-content .img {
     flex-basis: 45%;
