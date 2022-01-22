@@ -973,6 +973,7 @@ html {
 .feature .container .feature-content {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 80px;
 }
 @media (max-width: 1200px) {
     .feature .container .feature-content {
@@ -1003,7 +1004,7 @@ html {
 }
 @media (max-width: 767px) {
     .feature .container .feature-content p {
-        width: 270px;
+        width: 300px;
     }
 }
 @media (max-width: 1200px) {
