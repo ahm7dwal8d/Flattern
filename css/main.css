@@ -82,7 +82,9 @@ html {
 }
 .topbar .container .contact .email a {
     color: black;
-}.topbar .container .contact .email a:hover {
+    text-decoration: none;
+}
+.topbar .container .contact .email a:hover {
     color: var(--main-Color);
     transition: var(--main-Transition);
     -webkit-transition: var(--main-Transition);
@@ -135,70 +137,17 @@ html {
 .header {
     padding: 10px 0;
     position: relative;
-    background-color: white;
-}
-.header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.header .container .logo {
-    font-size: 40px;
-    color: black;
-    text-transform: uppercase;
-    height: 70.4px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.header .container i {
-    display: none;
-    font-size: 35px;
-}
-.header .container i:hover + .links {
-    display: flex;
-    position: absolute;
-    flex-direction: column;
-    top: 76px;
-    background-color: white;
-    height: 400px;
     z-index: 1;
     width: 100%;
-    left: 0px;
+    background-color: white;
 }
-.header .container i:hover + .links a {
-    padding: 20px 0;
-    display: block; 
-}
-@media (max-width: 1200px) {
-    .header .container i {
-        display: block;
-    }
-}
-.header .container .links {
+.header .container-fluid {
     display: flex;
-    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
-@media (max-width: 1200px) {
-    .header .container .links {
-        display: none;
-    }
-}
-.header .container .links a {
-    padding: 12px;
-    color: black;
-    text-transform: uppercase;
-}
-.header .container .links a.active {
-    color: var(--main-Color);
-}
-.header .container .links a:hover {
-    color: var(--main-Color);
-    transition: var(--main-Transition);
-    -webkit-transition: var(--main-Transition);
-    -moz-transition: var(--main-Transition);
-    -ms-transition: var(--main-Transition);
-    -o-transition: var(--main-Transition);
+.header .container-fluid .navbar-brand {
+    font-size: 2rem;
 }
 /* End Header  */
 /* Start landing */
@@ -729,7 +678,7 @@ html {
 .side .container > h2 {
     color: white;
     font-weight: normal;
-    font-size: 35px;
+    font-size: 50px;
 }
 .side .container .link {
     display: flex;
@@ -741,9 +690,10 @@ html {
     color: white;
 }
 .side .container .link a {
-    font-size: 24px;
+    font-size: 30px;
     color: var(--main-Color);
     padding: 8px;
+    text-decoration: none;
 }
 .side .container .link a:hover {
     color: white;
@@ -1004,7 +954,7 @@ html {
 }
 @media (max-width: 767px) {
     .feature .container .feature-content p {
-        width: 300px;
+        width: 400px;
     }
 }
 @media (max-width: 1200px) {
