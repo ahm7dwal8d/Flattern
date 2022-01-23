@@ -201,6 +201,7 @@ html {
     display: block;
     margin: 10px auto;
     border-radius: 6px;
+    text-decoration: none;
 }
 .landing .container a:hover {
     background-color: var(--main-Color);
@@ -263,6 +264,7 @@ html {
     padding: 13px;
     border-radius: 6px;
     color: var(--main-Color);
+    text-decoration: none;
 }
 @media (max-width: 767px) {
     .quete .container a {
@@ -363,6 +365,7 @@ html {
     padding: 15px;
     text-transform: uppercase;
     color: black;
+    text-decoration: none;
 }
 .portfolio .container .portfolio-link a.active {
     border-radius: 6px;
@@ -571,6 +574,7 @@ html {
     color: white;
     margin: 0 0 0 5px;
     text-transform: capitalize;
+    text-decoration: none;
 }
 .footer .container .link ul li a:hover {
     color: var(--main-Color);
@@ -601,6 +605,7 @@ html {
     color: white;
     margin: 0 0 0 5px;
     text-transform: capitalize;
+    text-decoration: none;
 }
 .footer .container .serv ul li a:hover {
     color: var(--main-Color);
@@ -1070,6 +1075,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
 }
 .pricing .container .box a:hover {
     border-color: var(--main-Color);
