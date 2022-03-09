@@ -78,7 +78,7 @@ html {
     align-items: center;
     margin-right: 10px;
 }
-.topbar .container .contact .email i {
+.topbar .container .contact .email svg {
     font-size: 20px;
     margin-right: 5px;
     color: var(--main-Color);
@@ -101,7 +101,7 @@ html {
     align-items: center;
     margin-left: 10px;
 }
-.topbar .container .contact .phone i {
+.topbar .container .contact .phone svg {
     font-size: 20px;
     color: var(--main-Color);
     margin-right: 5px;
@@ -111,7 +111,7 @@ html {
     font-size: 13px;
     margin-left: 3px;
 }
-.topbar .container .icons i {
+.topbar .container .icons svg {
     padding: 5px;
     font-size: 20px;
 }
@@ -119,7 +119,7 @@ html {
     .topbar .container .icons {
         display: none;
     }
-    .topbar .container .contact .phone i {
+    .topbar .container .contact .phone svg {
         padding-right: 0;
     }
     .topbar .container .contact .phone span {
@@ -127,7 +127,7 @@ html {
         font-size: 14px;
     }
 }
-.topbar .container .icons i:hover {
+.topbar .container .icons svg:hover {
     color: var(--main-Color);
     transition: var(--main-Transition);
     -webkit-transition: var(--main-Transition);
@@ -846,34 +846,25 @@ html {
 }
 .team .container .team-content {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 50px;
     margin-top: 60px;
 }
-@media (max-width: 1200px) {
-    .team .container .team-content {
-        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    }
-}
-@media (max-width: 991px) {
-    .team .container .team-content {
-        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    }
-}
+
 .team .container .team-content .img {
     position: relative;
     overflow: hidden;
     box-shadow: 13px 8px 6px #ddd;
 }
 .team .container .team-content .img img {
-    max-width: 100%;
+    width: 100%;
     border-radius: 6px;
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
     -ms-border-radius: 6px;
     -o-border-radius: 6px;
 }
-.team .container .team-content .img:hover .link {
+.team .container .team-content .img:hover .links {
     opacity: 1;
     margin-top: -30px;
     transition: var(--main-Transition);
@@ -882,7 +873,7 @@ html {
     -ms-transition: var(--main-Transition);
     -o-transition: var(--main-Transition);
 }
-.team .container .team-content .img .link {
+.team .container .team-content .img .links {
     position: absolute;
     left: 10px;
     right: 10px;
@@ -891,38 +882,37 @@ html {
     height: 62px;
     opacity: 0;
     margin-top: 30px;
+    display: flex;
 }
 @media (max-width: 1200px) {
-    .team .container .team-content .img .link  {
-        height: 70px;
-        margin-bottom: 10px;
+    .team .container .team-content .img .links  {
+        width: calc(100% - 40px);
+        margin-bottom: 20px;
     }
 }
-@media (max-width: 991px) {
-    .team .container .team-content .img .link  {
-        height: 70px;
-        width: 580px;
-        margin-bottom: 10px;
-    }
+.team .container .team-content .img .links .link {
+    margin: 15px 30px;
 }
-.team .container .team-content .img .link i {
-    font-size: 25px;
+.team .container .team-content .img .link svg {
+    font-size: 30px;
     color: black;
-    margin: 15px 15px 0;
 }
 @media (max-width: 1200px) {
-    .team .container .team-content .img .link i {
-        margin: 15px 35px 0;
-        font-size: 32px;
+    .team .container .team-content .img .links .link {
+        margin:  15px 65px;
+    }
+}
+@media (max-width: 767px) {
+    .team .container .team-content .img .links .link {
+        margin:  15px 30px 0;
     }
 }
 @media (max-width: 991px) {
-    .team .container .team-content .img .link i {
-        margin: 15px 52px;
-        font-size: 35px;
+    .team .container .team-content .img .links .link {
+        margin:  15px 45px 0;
     }
 }
-.team .container .team-content .img .link i:hover {
+.team .container .team-content .img .link svg:hover {
     color: var(--main-Color);
     transition: var(--main-Transition);
     -webkit-transition: var(--main-Transition);
@@ -940,12 +930,7 @@ html {
     -moz-border-radius: 6px;
     -ms-border-radius: 6px;
     -o-border-radius: 6px;
-}
-
-@media (max-width: 991px) {
-    .team .container .team-content .img .info {
-        width: 602px;
-    }
+    width: 100%;
 }
 @media (max-width: 767px) {
     .team .container .team-content .img .info {
