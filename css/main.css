@@ -53,6 +53,9 @@ html {
     padding: 20px 0 10px;
     background-color: #eee;
 }
+.topbar.hide {
+    display: none;
+}
 .topbar .container {
     display: flex;
     justify-content: space-between;
@@ -140,6 +143,22 @@ html {
     z-index: 1;
     width: 100%;
     background-color: white;
+    transition: all 0.4s linear;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -ms-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+}
+.header.fixed {
+    position: fixed;
+    width: 100%;
+    z-index: 99999;
+    padding: 15px;
+    transition: all 0.4s linear;
+    -webkit-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -ms-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
 }
 .header .container-fluid {
     display: flex;
@@ -157,40 +176,50 @@ html {
     position: relative;
     background-image: url(../images/slide/slide-1.jpg);
     background-size: cover;
-    height: 80vh;
-    animation: Change-Backgroud linear 7s infinite;
-    -webkit-animation: Change-Backgroud linear 7s infinite;
+    height: calc(100vh - 75.99px);
+    background-attachment: fixed;
 }
 .landing .container {
     text-align: center;
-    margin: 100px 250px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
     background-color: rgba(28, 23, 21, 0.7);
     width: 700px;
-    height: 300px;
+    height: fit-content;
     color: white;
     padding: 20px;
     border-top: 10px solid var(--main-Color);
+    -webkit-transform: translate(-50% , -50%);
+    -moz-transform: translate(-50% , -50%);
+    -ms-transform: translate(-50% , -50%);
+    -o-transform: translate(-50% , -50%);
 }
-@media (max-width: 767px) {
+@media (max-width: 991px) {
     .landing .container {
-        margin: 0;
-        width: fit-content;
-        height: fit-content;
-    }
-}
-@media (min-width: 768px) and (max-width: 1200px) {
-    .landing .container {
-        margin: 150px;
+        width: 100%;
     }
 }
 .landing .container h2 {
     text-align: left;
+}
+@media (max-width: 991px) {
+    .landing .container h2 {
+        font-size: 20px;
+        text-align: center;
+    }
 }
 .landing .container p {
     line-height: 1.6;
     text-align: left;
     font-size: 20px;
     margin: 0;
+}
+@media (max-width: 991px) {
+    .landing .container p {
+        font-size: 16px;
+    }
 }
 .landing .container a {
     border: 2px solid var(--main-Color);
@@ -202,6 +231,10 @@ html {
     margin: 10px auto;
     border-radius: 6px;
     text-decoration: none;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
 }
 .landing .container a:hover {
     background-color: var(--main-Color);
@@ -265,6 +298,10 @@ html {
     border-radius: 6px;
     color: var(--main-Color);
     text-decoration: none;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
 }
 @media (max-width: 767px) {
     .quete .container a {
@@ -304,26 +341,27 @@ html {
     background-color: #eee;
     padding: 20px;
     position: relative;
+    border-radius: 4px;
     transition: var(--main-Transition);
     -webkit-transition: var(--main-Transition);
     -moz-transition: var(--main-Transition);
     -ms-transition: var(--main-Transition);
     -o-transition: var(--main-Transition);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
 }
 .services .container .box:hover h2 {
     color: var(--main-Color);
 }
-.services .container .box:hover i {
-    width: 87px;
-    height: 87px;
-    border: 3px solid var(--main-Color);
-    background-color: white;
+.services .container .box:hover svg {
+    font-size: 50px;
     color: var(--main-Color);
 }
-.services .container .box i {
-    font-size: 30px;
-    width: 80px;
-    height: 80px;
+.services .container .box .icon {
+    width: 70px;
+    height: 70px;
     color: white;
     background-color: var(--main-Color);
     border-radius: 50%;
@@ -332,13 +370,23 @@ html {
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: -58px;
-    left: calc(100% - 211px);
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
 }
-@media (max-width: 1200px) {
-    .services .container .box i {
-        left: calc(50% - 43px);
-    }
+.services .container .box:hover .icon {
+    background-color: white;
+}
+.services .container .box svg {
+    font-size: 40px;
 }
 .services .container .box h2 {
     margin-top: 40px;
@@ -361,13 +409,13 @@ html {
 .portfolio .container .portfolio-link {
     text-align: center;
 }
-.portfolio .container .portfolio-link a {
+.portfolio .container .portfolio-link span {
     padding: 15px;
     text-transform: uppercase;
     color: black;
-    text-decoration: none;
+    cursor: pointer;
 }
-.portfolio .container .portfolio-link a.active {
+.portfolio .container .portfolio-link span.active {
     border-radius: 6px;
     color: white;
     background-color: var(--main-Color);
@@ -376,7 +424,7 @@ html {
     -ms-border-radius: 6px;
     -o-border-radius: 6px;
 }
-.portfolio .container .portfolio-link a:hover {
+.portfolio .container .portfolio-link span:hover {
     background-color: var(--main-Color);
     border-radius: 6px;
     color: white;
@@ -566,7 +614,7 @@ html {
 .footer .container .link ul li {
     padding: 15px;
 }
-.footer .container .link ul li i {
+.footer .container .link ul li svg {
     font-size: 25px;
     color: var(--main-Color);
 }
@@ -597,7 +645,7 @@ html {
 .footer .container .serv ul li {
     padding: 15px;
 }
-.footer .container .serv ul li i {
+.footer .container .serv ul li svg {
     font-size: 25px;
     color: var(--main-Color);
 }
@@ -636,13 +684,19 @@ html {
     justify-content: space-between;
     align-items: center;
 }
-.copy .container p {
+.copy .container h2 {
     font-size: 20px;
+}
+.copy .container p {
+    font-size: 18px;
 }
 .copy .container span {
     color: var(--main-Color);
 }
-.copy .container .icons i {
+.copy .container .icons {
+    display: flex;
+}
+.copy .container .icons .icon {
     padding: 10px;
     font-size: 18px;
     width: 50px;
@@ -651,9 +705,17 @@ html {
     border-radius: 50%;
     text-align: center;
     line-height: 1.6;
+    margin-left:10px;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    cursor: pointer;
+}
+.copy .container .icons svg {
     opacity: 0.7;
 }
-.copy .container .icons i:hover {
+.copy .container .icons svg:hover {
     opacity: 1;
     cursor: pointer;
     transition: var(--main-Transition);
@@ -967,9 +1029,24 @@ html {
         max-width: 100%;
     }
 }
-.feature .container .feature-content .img {
+.feature .container .feature-content .img-1 {
     flex-basis: 45%;
     flex: 1;
+}
+.feature .container .feature-content .img-2 {
+    flex-basis: 45%;
+    flex: 1;
+    display: none;
+}
+.feature .container .feature-content .img-3 {
+    flex-basis: 45%;
+    flex: 1;
+    display: none;
+}
+.feature .container .feature-content .img-4 {
+    flex-basis: 45%;
+    flex: 1;
+    display: none;
 }
 /* End Features */
 /* Start Testmonials */
@@ -1016,8 +1093,8 @@ html {
 }
 .pricing .container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-    gap: 100px;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 50px;
     margin-top: 100px;
 }
 .pricing .container .head {
@@ -1027,7 +1104,7 @@ html {
     background-color: rgb(151, 147, 147);
     box-shadow: 2px 10px 20px #ddd;
     color: white;
-    height: 50vh;
+    height: fit-content;
     border-radius: 8px;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
@@ -1037,6 +1114,7 @@ html {
 .pricing .container .box .head {
     text-align: center;
     padding: 15px;
+    text-transform: uppercase;
 }
 .pricing .container .box ul .price {
     display: flex;
@@ -1094,14 +1172,3 @@ html {
     color: var(--main-Color);
 }
 /* End Pricing  */
-
-/* Start Animation  */
-@keyframes Change-Backgroud {
-    40% {
-        background-image: url(../images/slide/slide-2.jpg);
-    }
-    90% {
-        background-image: url(../images/slide/slide-3.jpg);
-    }
-}
-/* End Animation */

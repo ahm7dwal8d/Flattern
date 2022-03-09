@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/normalze.css">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" 
@@ -38,16 +38,16 @@
     </div>
     <div class="header">
         <div class="continer">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container">
                   <a class="navbar-brand" href="index.html">Flattern</a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <i class="fas fa-bars"></i>
                   </button>
                   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                       <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link" aria-current="page" href="#">Home</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="about.html">About</a>
@@ -56,7 +56,7 @@
                         <a class="nav-link" href="services.html">Services</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="portfolio.html">portfolio</a>
+                        <a class="nav-link active" href="portfolio.html">portfolio</a>
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="pricing.html">Pricing</a>
@@ -65,10 +65,6 @@
                         <a class="nav-link" href="testimonials.html">Testimonials</a>
                       </li>
                     </ul>
-                    <form class="d-flex">
-                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                      <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
                   </div>
                 </div>
               </nav>
@@ -87,155 +83,155 @@
                         </div>
                     </div>
                     <!-- Side  -->
-        <!-- Start Portfolio  -->
-        <div class="portfolio">
-            <div class="container">
-                <div class="portfolio-link">
-                    <a href="#" class="active">all</a>
-                    <a href="#">app</a>
-                    <a href="#">card</a>
-                    <a href="#">web</a>
+    <!-- Start Portfolio  -->
+    <div class="portfolio">
+        <div class="container">
+            <div class="portfolio-link">
+                <span class="active" data-class=".box">all</span>
+                <span data-class=".app">app</span>
+                <span data-class=".card">card</span>
+                <span data-class=".web">web</span>
+            </div>
+            <div class="portfolio-content">
+                <div class="box web">
+                    <div class="img">
+                        <img src="images/portfolio/portfolio-1.jpg " alt="">
+                    </div>
+                    <div class="text">
+                        <div class="head">
+                            <h2>web1</h2>
+                            <span>web</span>
+                        </div>
+                        <div class="info">
+                            <i class="fas fa-link"></i>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
                 </div>
-                <div class="portfolio-content">
-                    <div class="box">
-                        <div class="img">
-                            <img src="images/portfolio/portfolio-1.jpg " alt="">
+                <div class="box app">
+                    <div class="img">
+                        <img src="images/portfolio/portfolio-2.jpg " alt="">
+                    </div>
+                    <div class="text">
+                        <div class="head">
+                            <h2>app1</h2>
+                            <span>app</span>
                         </div>
-                        <div class="text">
-                            <div class="head">
-                                <h2>web1</h2>
-                                <span>web</span>
-                            </div>
-                            <div class="info">
-                                <i class="fas fa-link"></i>
-                                <i class="fas fa-plus"></i>
-                            </div>
+                        <div class="info">
+                            <i class="fas fa-link"></i>
+                            <i class="fas fa-plus"></i>
                         </div>
                     </div>
-                    <div class="box">
-                        <div class="img">
-                            <img src="images/portfolio/portfolio-2.jpg " alt="">
+                </div>
+                <div class="box card">
+                    <div class="img">
+                        <img src="images/portfolio/portfolio-3.jpg " alt="">
+                    </div>
+                    <div class="text">
+                        <div class="head">
+                            <h2>card1</h2>
+                            <span>card</span>
                         </div>
-                        <div class="text">
-                            <div class="head">
-                                <h2>web1</h2>
-                                <span>web</span>
-                            </div>
-                            <div class="info">
-                                <i class="fas fa-link"></i>
-                                <i class="fas fa-plus"></i>
-                            </div>
+                        <div class="info">
+                            <i class="fas fa-link"></i>
+                            <i class="fas fa-plus"></i>
                         </div>
                     </div>
-                    <div class="box">
-                        <div class="img">
-                            <img src="images/portfolio/portfolio-3.jpg " alt="">
+                </div>
+                <div class="box">
+                    <div class="img">
+                        <img src="images/portfolio/portfolio-4.jpg " alt="">
+                    </div>
+                    <div class="text">
+                        <div class="head">
+                            <h2>web1</h2>
+                            <span>web</span>
                         </div>
-                        <div class="text">
-                            <div class="head">
-                                <h2>web1</h2>
-                                <span>web</span>
-                            </div>
-                            <div class="info">
-                                <i class="fas fa-link"></i>
-                                <i class="fas fa-plus"></i>
-                            </div>
+                        <div class="info">
+                            <i class="fas fa-link"></i>
+                            <i class="fas fa-plus"></i>
                         </div>
                     </div>
-                    <div class="box">
-                        <div class="img">
-                            <img src="images/portfolio/portfolio-4.jpg " alt="">
+                </div>
+                <div class="box web">
+                    <div class="img">
+                        <img src="images/portfolio/portfolio-5.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <div class="head">
+                            <h2>web1</h2>
+                            <span>web</span>
                         </div>
-                        <div class="text">
-                            <div class="head">
-                                <h2>web1</h2>
-                                <span>web</span>
-                            </div>
-                            <div class="info">
-                                <i class="fas fa-link"></i>
-                                <i class="fas fa-plus"></i>
-                            </div>
+                        <div class="info">
+                            <i class="fas fa-link"></i>
+                            <i class="fas fa-plus"></i>
                         </div>
                     </div>
-                    <div class="box">
-                        <div class="img">
-                            <img src="images/portfolio/portfolio-5.jpg" alt="">
+                </div>
+                <div class="box app">
+                    <div class="img">
+                        <img src="images/portfolio/portfolio-6.jpg " alt="">
+                    </div>
+                    <div class="text">
+                        <div class="head">
+                            <h2>web1</h2>
+                            <span>web</span>
                         </div>
-                        <div class="text">
-                            <div class="head">
-                                <h2>web1</h2>
-                                <span>web</span>
-                            </div>
-                            <div class="info">
-                                <i class="fas fa-link"></i>
-                                <i class="fas fa-plus"></i>
-                            </div>
+                        <div class="info">
+                            <i class="fas fa-link"></i>
+                            <i class="fas fa-plus"></i>
                         </div>
                     </div>
-                    <div class="box">
-                        <div class="img">
-                            <img src="images/portfolio/portfolio-6.jpg " alt="">
+                </div>
+                <div class="box card">
+                    <div class="img">
+                        <img src="images/portfolio/portfolio-7.jpg " alt="">
+                    </div>
+                    <div class="text">
+                        <div class="head">
+                            <h2>web1</h2>
+                            <span>web</span>
                         </div>
-                        <div class="text">
-                            <div class="head">
-                                <h2>web1</h2>
-                                <span>web</span>
-                            </div>
-                            <div class="info">
-                                <i class="fas fa-link"></i>
-                                <i class="fas fa-plus"></i>
-                            </div>
+                        <div class="info">
+                            <i class="fas fa-link"></i>
+                            <i class="fas fa-plus"></i>
                         </div>
                     </div>
-                    <div class="box">
-                        <div class="img">
-                            <img src="images/portfolio/portfolio-7.jpg " alt="">
+                </div>
+                <div class="box web">
+                    <div class="img">
+                        <img src="images/portfolio/portfolio-8.jpg " alt="">
+                    </div>
+                    <div class="text">
+                        <div class="head">
+                            <h2>web1</h2>
+                            <span>web</span>
                         </div>
-                        <div class="text">
-                            <div class="head">
-                                <h2>web1</h2>
-                                <span>web</span>
-                            </div>
-                            <div class="info">
-                                <i class="fas fa-link"></i>
-                                <i class="fas fa-plus"></i>
-                            </div>
+                        <div class="info">
+                            <i class="fas fa-link"></i>
+                            <i class="fas fa-plus"></i>
                         </div>
                     </div>
-                    <div class="box">
-                        <div class="img">
-                            <img src="images/portfolio/portfolio-8.jpg " alt="">
-                        </div>
-                        <div class="text">
-                            <div class="head">
-                                <h2>web1</h2>
-                                <span>web</span>
-                            </div>
-                            <div class="info">
-                                <i class="fas fa-link"></i>
-                                <i class="fas fa-plus"></i>
-                            </div>
-                        </div>
+                </div>
+                <div class="box card">
+                    <div class="img">
+                        <img src="images/portfolio/portfolio-9.jpg " alt="">
                     </div>
-                    <div class="box">
-                        <div class="img">
-                            <img src="images/portfolio/portfolio-9.jpg " alt="">
+                    <div class="text">
+                        <div class="head">
+                            <h2>web1</h2>
+                            <span>web</span>
                         </div>
-                        <div class="text">
-                            <div class="head">
-                                <h2>web1</h2>
-                                <span>web</span>
-                            </div>
-                            <div class="info">
-                                <i class="fas fa-link"></i>
-                                <i class="fas fa-plus"></i>
-                            </div>
+                        <div class="info">
+                            <i class="fas fa-link"></i>
+                            <i class="fas fa-plus"></i>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- End Portfolio  -->
+    </div>
+    <!-- End Portfolio  -->
     <!-- Start Footer  -->
     <div class="footer">
         <div class="container">
@@ -353,15 +349,23 @@
                 <p>Designed by <span>Ahmed Walid</span></p>
             </div>
             <div class="icons">
-                <i class="fab fa-facebook-f"></i>
-                <i class="fab fa-twitter"></i>
-                <i class="fab fa-linkedin-in"></i>
-                <i class="fab fa-skype"></i>
+                <div class="icon">
+                    <i class="fab fa-facebook-f"></i>
+                </div>
+                <div class="icon">
+                    <i class="fab fa-twitter"></i>
+                </div>
+                <div class="icon">
+                    <i class="fab fa-linkedin-in"></i>
+                </div>
+                <div class="icon">
+                    <i class="fab fa-skype"></i>
+                </div>
             </div>
         </div>
     </div>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/popper.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
